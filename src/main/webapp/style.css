@@ -1,0 +1,98 @@
+@charset "ISO-8859-1";
+/* intro.css*/
+/* General reset for the whole page */
+html, body {
+    height: 100%; /* Sets full height for the document */
+    margin: 0;    /* Removes default margin */
+    padding: 0;   /* Removes default padding */
+    font-family: Arial, sans-serif; /* Sets a default font family */
+}
+
+/* Main div containing two side-by-side divs, filling entire page */
+#main_div {
+    display: flex;        /* Makes children divs side-by-side */
+    height: 100%;         /* Ensures it fills the entire height of the page */
+    width: 100%;          /* Ensures it fills the entire width of the page */
+    box-sizing: border-box; /* Ensures padding/borders don't affect dimensions */
+}
+
+/* First div with centered content and white background, filling half the page horizontally */
+#firstdiv {
+    flex: 1; /* Occupies half of #main_div */
+    background-color: white; /* White background */
+    display: flex; /* Enables centering content */
+    justify-content: center; /* Centers content horizontally */
+    align-items: center; /* Centers content vertically */
+}
+
+#firstdiv img {
+    width: 30%;  /* Set image width to 60% of the div */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+/* Second div with violet background, filling the other half */
+#seconddiv {
+    flex: 1; /* Occupies the other half of #main_div */
+    background: rgb(9,9,121);
+    background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+    display: flex; /* Enables stacking internal divs vertically */
+    flex-direction: column; /* Stacks children vertically */
+    justify-content: space-between; /* Spreads divs evenly vertically */
+    padding: 20px; /* Adds padding to the inner elements */
+}
+
+/* Student main section, taking top half of seconddiv */
+#studentmain {
+    flex: 1; /* Occupies top half of #seconddiv */
+    display: flex; /* Enables centering content */
+    flex-direction: column; /* Stacks elements vertically */
+    justify-content: center; /* Centers content within the div */
+    align-items: center; /* Centers content within the div */
+}
+
+/* Admin main section, taking bottom half of seconddiv */
+#adminmain {
+    flex: 1; /* Occupies bottom half of #seconddiv */
+    display: flex; /* Enables centering content */
+    flex-direction: column; /* Stacks elements vertically */
+    justify-content: center; /* Centers content within the div */
+    align-items: center; /* Centers content within the div */
+}
+
+/* Increase font size for "Student" and "Admin" labels */
+#studentname, #adminame {
+    font-size: 24px; /* Increase the font size to 24px for larger text */
+    font-weight: bold; /* Optional: makes the text bold */
+    color: lightgray; /* Optional: ensures text is easily readable */
+    margin-bottom: 10px; /* Optional: adds space between the label and the buttons */
+}
+
+/* Aligns elements within student and admin sections */
+#student, #admin {
+    text-align: center; /* Centers text */
+}
+
+#login button, #register button {
+    padding: 10px 20px; /* Increase padding: 10px on top/bottom, 20px on left/right */
+    font-size: 18px; /* Increase font size for better readability */
+    border: none; /* Optional: removes button border */
+    border-radius: 5px; /* Optional: smooth rounded corners */
+    background-color: lightgray; /* Optional: light gray background color */
+    color: black; /* Optional: black text color */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+#login button:hover, #register button:hover {
+    background-color: gray;
+}
+
+/* Styling for the login and register buttons to align side-by-side */
+#login, #register {
+    display: inline-block; /* Puts login and register side-by-side */
+    margin: 10px; /* Adds spacing between buttons */
+}
+
+/*end of intro.css*/
+/*---------------------------------------------------------------------------------------------------------------------------------------------*/
+
+
